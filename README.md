@@ -2,12 +2,19 @@
 
 A desktop car rental management application built with Python, PySide6 (Qt) and MySQL. It manages vehicles, customers and rentals, and includes features for electric vehicles. The user interface is in Turkish.
 
+![Vehicle management screen](docs/screenshots/vehicles.png)
+
 ## Features
 - **Vehicle management:** add, update and search vehicles with detailed specs (brand, model, fuel type, gearbox, engine power, body type, daily price) and mark vehicles as out of service
 - **Customer management:** customer records with contact and driver's license information
 - **Rentals:** create a rental, calculate the total price for the selected number of days and list vehicles that are currently rented
 - **Electric vehicle support:** range (km) tracking for electric vehicles and an automatic 50% discount on their rentals
 - **Self-setting database:** on first run the app creates the database and tables, adds missing columns to older databases and inserts sample vehicles
+
+## Screenshots
+| Main menu | Rental with the electric vehicle discount |
+|---|---|
+| ![Main menu](docs/screenshots/main-menu.png) | ![Rental screen](docs/screenshots/rental-ev-discount.png) |
 
 ## Tech stack
 Python · PySide6 (Qt for Python, Qt Designer `.ui` files) · MySQL (`mysql-connector-python`)
@@ -22,7 +29,7 @@ Python · PySide6 (Qt for Python, Qt Designer `.ui` files) · MySQL (`mysql-conn
    ```powershell
    $env:RENTACAR_DB_PASSWORD = "your-mysql-password"
    ```
-   Optional: `RENTACAR_DB_HOST` (default `localhost`) and `RENTACAR_DB_USER` (default `root`).
+   Optional: `RENTACAR_DB_HOST` (default `localhost`), `RENTACAR_DB_PORT` (default `3306`) and `RENTACAR_DB_USER` (default `root`).
 4. Run the app:
    ```bash
    python MainWindow.py
