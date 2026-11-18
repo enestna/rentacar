@@ -1,12 +1,15 @@
 # database.py
 
+import os
+
 import mysql.connector
 
 
 DB_OKUL_NUMARASI = "90240000227"
-DB_HOST = "localhost"
-DB_USER = "root"
-DB_PASSWORD = "deneme"
+# Bağlantı bilgileri ortam değişkenlerinden okunur; şifre koda yazılmaz.
+DB_HOST = os.environ.get("RENTACAR_DB_HOST", "localhost")
+DB_USER = os.environ.get("RENTACAR_DB_USER", "root")
+DB_PASSWORD = os.environ.get("RENTACAR_DB_PASSWORD", "")
 DB_PORT = 3306
 DB_NAME = f"db{DB_OKUL_NUMARASI}"
 
